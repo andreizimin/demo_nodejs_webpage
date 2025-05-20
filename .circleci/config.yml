@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build_test:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:12
     steps:
       - checkout
       - run:
@@ -11,7 +11,7 @@ jobs:
             npm install
   build_docker_image:
     docker:
-      - image: cimg/base:stable
+      - image: cimg/node:12
     steps:
       - checkout
       - setup_remote_docker:
